@@ -2,7 +2,7 @@ import React from 'react';
 
 import { PropertyProps } from '@/interfaces/index';
 
-const PropertyCard: React.FC<PropertyProps> = ({ 
+const Card: React.FC<PropertyProps> = ({ 
   name, 
   address, 
   rating, 
@@ -16,7 +16,7 @@ const PropertyCard: React.FC<PropertyProps> = ({
   const displayRating = Math.max(0, Math.min(5, rating || 0));
   
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm mx-auto">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm mx-auto">
       <div className="relative">
         <img 
           src={image || '/placeholder-image.jpg'} 
@@ -32,6 +32,7 @@ const PropertyCard: React.FC<PropertyProps> = ({
           </span>
         )}
       </div>
+
       <div className="p-4">
         <h2 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">
           {name || 'Unnamed Property'}
@@ -52,6 +53,7 @@ const PropertyCard: React.FC<PropertyProps> = ({
             ))}
           </div>
         </div>
+
         <p className="text-gray-600 dark:text-gray-300 mb-2">
           🏷️ Category: {category?.length ? category.join(", ") : 'Not specified'}
         </p>
@@ -82,4 +84,4 @@ const PropertyCard: React.FC<PropertyProps> = ({
   );
 };
 
-export default PropertyCard;
+export default Card;
