@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 export interface PropertyProps{
     name: string;
     address: {
@@ -15,6 +16,7 @@ export interface PropertyProps{
         occupants: string;
       };
       image: string;
+      description: string;
       discount: string;
 
 }
